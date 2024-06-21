@@ -1,4 +1,4 @@
-django
+django==3.2.4
 django-admin-interface
 django-crispy-forms
 crispy-bootstrap4
@@ -15,6 +15,7 @@ django-multi-captcha-admin
 cloudinary
 whitenoise
 
-# pip install -r requeriments.txt
+
+pip install -r requeriments.txt
 
 
