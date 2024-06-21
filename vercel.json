@@ -1,17 +1,21 @@
 {
-    "builds": [{
-      "src": "Pagina/wsgi.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "15mb",
-        "runtime": "python3.9",
-        "env": {
-          "PYTHONPATH": "$PYTHONPATH:/"
+    "builds": [
+      {
+        "src": "Pagina/wsgi.py",
+        "use": "@vercel/python",
+        "config": {
+          "maxLambdaSize": "15mb",
+          "runtime": "python3.9",
+          "env": {
+            "PYTHONPATH": "$PYTHONPATH:/"
+          }
         }
       }
-    }],
-    "routes": [{
-      "src": "/(.*)",
-      "dest": "Pagina/wsgi.py"
-    }]
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "Pagina/wsgi.py"
+      }
+    ]
   }

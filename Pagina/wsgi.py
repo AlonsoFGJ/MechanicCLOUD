@@ -11,3 +11,6 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Pagina.settings")
 
 # Configuración de Django
 application = get_wsgi_application()
+
+# Opcional: Asignar app a application
+app = application
