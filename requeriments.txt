@@ -15,5 +15,5 @@ django-multi-captcha-admin
 cloudinary
 whitenoise
 
-# pip install -r requeriments.txt
+pip install -r requeriments.txt
 
