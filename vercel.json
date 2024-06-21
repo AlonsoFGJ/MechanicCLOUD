@@ -6,7 +6,7 @@
     }],
     "routes":[{
         "src": "/(.*)",
-        "dest": "Pagina/wsi.py"
+        "dest": "Pagina/wsgi.py"
     }]
 
 }
