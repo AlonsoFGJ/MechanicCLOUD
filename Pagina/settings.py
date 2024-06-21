@@ -170,7 +170,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 #CONFIG CLOUDINARY
 cloudinary.config(
-    cloud_name = 'dapibed5f',
+    cloud_name='dapibed5f',
     api_key='692897366215152',
     api_secret='td6YHUa51DJ7E7RFiKBG9QK0rLs'
 )
