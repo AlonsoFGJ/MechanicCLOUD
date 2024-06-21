@@ -1,4 +1,4 @@
-django==3.2.4
+django
 django-admin-interface
 django-crispy-forms
 crispy-bootstrap4
