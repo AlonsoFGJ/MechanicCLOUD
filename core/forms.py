@@ -14,6 +14,8 @@ class EmpleadoForm(ModelForm):
 
 class SubirProyectoForm(ModelForm):
 
+    captcha = ReCaptchaField()
+
     class Meta:
         model = SubirProyecto
         fields = '__all__'

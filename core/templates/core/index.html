@@ -38,7 +38,9 @@
       <div class="carousel-item active">
           <img src="{% static 'core/img/Motor-de-Arranque.png' %}" width="1000" height="550" alt="Trabajo 1" class="d-block" style="width:100%">
           <div class="carousel-caption">
+            {% if perms.core.view_empleado %} 
               <a class="rounded-pill custom-button" href="{% url 'ultimos_trabajos' %}">
+            {% endif %}
                   <h3 class="button-text">Reparación motor de arranque</h3>
               </a>
           </div>
@@ -46,7 +48,9 @@
       <div class="carousel-item">
           <img src="{% static 'core/img/sistema_electrico.jpeg' %}" width="1000" height="550" alt="Trabajo 2" class="d-block" style="width:100%">
           <div class="carousel-caption">
+            {% if perms.core.view_empleado %} 
               <a class="rounded-pill custom-button" href="{% url 'ultimos_trabajos' %}">
+            {% endif %}
                   <h3 class="button-text">Sistema eléctrico del motor</h3>
               </a>
           </div>
@@ -54,32 +58,40 @@
       <div class="carousel-item">
           <img src="{% static 'core/img/Caja_de_cambios.png' %}" width="1000" height="550" alt="Trabajo 3" class="d-block" style="width:100%">
           <div class="carousel-caption">
+            {% if perms.core.view_empleado %} 
               <a class="rounded-pill custom-button" href="{% url 'ultimos_trabajos' %}">
-                  <h3 class="button-text">Caja de cambios</h3>
+            {% endif %}      
+                <h3 class="button-text">Caja de cambios</h3>
               </a>
           </div>
       </div>
       <div class="carousel-item">
           <img src="{% static 'core/img/Suspension_1.png' %}" width="1000" height="550" alt="Trabajo 4" class="d-block" style="width:100%">
           <div class="carousel-caption">
+            {% if perms.core.view_empleado %} 
               <a class="rounded-pill custom-button" href="{% url 'ultimos_trabajos' %}">
-                  <h3 class="button-text">Suspensiones</h3>
+            {% endif %}      
+                <h3 class="button-text">Suspensiones</h3>
               </a>
           </div>
       </div>
       <div class="carousel-item">
           <img src="{% static 'core/img/Direccional.png' %}" width="1000" height="550" alt="Trabajo 5" class="d-block" style="width:100%">
           <div class="carousel-caption">
+            {% if perms.core.view_empleado %} 
               <a class="rounded-pill custom-button" href="{% url 'ultimos_trabajos' %}">
-                  <h3 class="button-text">Direccional</h3>
+            {% endif %}      
+                <h3 class="button-text">Direccional</h3>
               </a>
           </div>
       </div>
       <div class="carousel-item">
           <img src="{% static 'core/img/Suspension_2.png' %}" width="1000" height="550" alt="Trabajo 6" class="d-block" style="width:100%">
           <div class="carousel-caption">
+            {% if perms.core.view_empleado %} 
               <a class="rounded-pill custom-button" href="{% url 'ultimos_trabajos' %}">
-                  <h3 class="button-text">Reparación de ejes</h3>
+            {% endif %}     
+                <h3 class="button-text">Reparación de ejes</h3>
               </a>
           </div>
       </div>
