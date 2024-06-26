@@ -7,11 +7,11 @@ from .serializers import *
 from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.models import Group 
 #IMPORT API
-from rest_framework import viewsets
-from rest_framework.renderers import JSONRenderer
-import requests
+from rest_framework import viewsets # type: ignore
+from rest_framework.renderers import JSONRenderer # type: ignore
+import requests # type: ignore
 from django.core.paginator import Paginator
- 
+
 
 # Create your views here.
 def user_in_group(user, group_name):
@@ -153,16 +153,23 @@ def venta_productos (request):
 
 # UTILIZAMOS LAS VIEWSET PARA MANEJAR LAS PETICIONES HTTP (GET,POST,PUT,DELETE)
 class TipoEmpleadoViewset(viewsets.ModelViewSet):
-    queryset = TipoEmpleado.objects.all()
+    queryset = TipoEmpleado.objects.all().order_by('id')
     serializer_class = TipoEmpleadoSerializers
     renderer_classes = [JSONRenderer]
 
 class EmpleadoViewset(viewsets.ModelViewSet):
-    queryset = Empleado.objects.all()
+    queryset = Empleado.objects.all().order_by('id')
     serializer_class = EmpleadoSerializers
     renderer_classes = [JSONRenderer]
 
+class GeneroViewset(viewsets.ModelViewSet):
+    queryset = Genero.objects.all().order_by('id')
+    serializer_class = GeneroSerializers
+    renderer_classes = [JSONRenderer]
 
+#METODOS PARA LISTAR DESDE EL API
+
+@permission_required('core.add_empleado')
 def empleadosapi (request): 
     response = requests.get('http://127.0.0.1:8000/api/empleados/')
     empleados = response.json()
@@ -172,3 +179,14 @@ def empleadosapi (request):
     }
 
     return render(request, 'core/empleados/crudapi/index.html', aux)
+
+
+def empleadodetalle(request, id):
+    response = requests.get(f'http://127.0.0.1:8000/api/empleados/{id}/')
+    empleado = response.json()
+
+    aux = {
+        'empleado' : empleado
+    }
+
+    return render(request, 'core/empleados/crudapi/detalle.html', aux)

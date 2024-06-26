@@ -128,6 +128,7 @@
                         <li><a href="{% url 'empleados' %}" style=" color:white;">Lista Mecanicos</a></li>
                         {% endif %}
                         {% if perms.core.add_empleado %}
+                        <li><a href="{% url 'empleadosapi' %}" style=" color:white;">Lista Mecanicos API</a></li>
                         <li><a href="{% url 'empleadosadd' %}" style=" color:white;">Agregar</a></li>
                         {% endif %}
                 </ul>
