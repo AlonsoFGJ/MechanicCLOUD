@@ -16,6 +16,6 @@ cloudinary
 whitenoise
 
 
-
+pip install -r requeriments.txt
 
 
